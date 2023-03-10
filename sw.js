@@ -5,7 +5,7 @@ const CACHE_NAME = 'v1_cache_JFCF_PWA';
 self.addEventListener("install", (e) => {
     e.waitUntil(
         caches
-            .open(cache_NAME)
+            .open(CACHE_NAME)
             .then((cache) => {
                 return cache.addAll(urlsToCache).then(() => {
                     self.skipWaiting();
